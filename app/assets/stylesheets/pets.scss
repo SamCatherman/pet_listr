@@ -1,0 +1,18 @@
+// Place all the styles related to the pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "semantic-ui";
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px auto);
+}
+
+.pet_table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

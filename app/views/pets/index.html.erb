@@ -1,0 +1,29 @@
+  <div class='row'>
+    <div class="centered column">
+      <h1>Pet Listr</h1>
+      <table class="ui very compact table pet_table">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Species</th>
+          <th>Disposition</th>
+          <th>Color</th>
+          <th>Age</th>
+          <th>Weight</th>
+          <th>Owner</th>
+        </tr>
+        <% @pets.each do |pet| %>
+        <tr>
+          <td><%= pet.id %></td>
+          <td><%= link_to pet.name, pet_path(pet)%></td>
+          <td><%= pet.species%></td>
+          <td><%= pet.disposition%></td>
+          <td><%= pet.color%></td>
+          <td><%= pet.age%></td>
+          <td><%= pet.weight%></td>
+          <td><%= link_to pet.owner.name, owner_path(pet.owner.id) %></td>
+        </tr>
+        <%end%>
+      </table>
+    </div>
+  </div>
