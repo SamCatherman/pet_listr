@@ -5,11 +5,10 @@
     </div>
     <div class="content">
       <h3><%= @pet.name%></h3>
-      <p>Maggie is a <%= @pet.disposition%> <%= @pet.color%>
+      <p><%= @pet.name%> is a <%= @pet.disposition%> <%= @pet.color%>
         <%= @pet.age%>-year-old <%= @pet.species%> that weighs
         <%= @pet.weight%> lbs and belongs to
-        <%= link_to @pet.owner.name, owner_path(@pet.owner)%> </p>
-
+        <%= link_to @pet.owner.name, owner_path(@pet.owner)%> <i class='user icon'></i></p>
       <%= link_to 'All Pets', pets_path%>
     </div>
   </div>

@@ -1,6 +1,5 @@
   <div class='row'>
     <div class="centered column">
-      <h1>Pet Listr</h1>
       <table class="ui very compact table pet_table">
         <tr>
           <th>ID</th>
@@ -11,6 +10,7 @@
           <th>Age</th>
           <th>Weight</th>
           <th>Owner</th>
+          <th>Delete</th>
         </tr>
         <% @pets.each do |pet| %>
         <tr>
@@ -22,8 +22,11 @@
           <td><%= pet.age%></td>
           <td><%= pet.weight%></td>
           <td><%= link_to pet.owner.name, owner_path(pet.owner.id) %></td>
+          <td><%= link_to "X", pet_path(pet),
+        method: :delete, data: {confirm: "Send this pet to the farm?"} %></td>
         </tr>
         <%end%>
       </table>
+        <%= link_to '( + )', new_pet_path %>
     </div>
   </div>

@@ -1,0 +1,30 @@
+<div class="centered column">
+
+<form class="ui form" action="/pets" method="POST">
+  <div class="field">
+    <input type="text" name="name" placeholder="Enter name">
+  </div>
+
+  <div class="field">
+    <input type="text" name="species" placeholder="Enter age">
+  </div>
+
+  <div class="field">
+    <input type="text" name="disposition" placeholder="Enter disposition">
+  </div>
+
+  <div class="field">
+    <input type="text" name="weight" placeholder="Enter weight">
+  </div>
+
+  <div class="field">
+    <input type="text" name="color" placeholder="Enter color">
+  </div>
+  <!--  number input for owner id -->
+  <div class="field">
+    <input type="number" name="owner_id" placeholder="Enter a valid owner_id">
+  </div>
+  <button class="ui button"><i class="save icon"></i>Create</button>
+</form>
+<%= link_to "All Pets", pets_path %>
+</div>
